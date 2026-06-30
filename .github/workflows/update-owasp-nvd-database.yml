@@ -27,7 +27,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Cache Maven repository
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: ~/.m2/repository
           key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
@@ -38,7 +38,7 @@ jobs:
         run: echo "date=$(date +'%Y%m%d%H%M')" >> $GITHUB_OUTPUT
 
       - name: Restore NVD database cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: ${{ github.workspace }}/dc-data
           key: owasp-nvd-data-${{ runner.os }}-${{ steps.date.outputs.date }}
@@ -56,7 +56,7 @@ jobs:
             -Dscan=${{ github.workspace }}/empty-scan
 
       - name: Save NVD database cache
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: ${{ github.workspace }}/owasp-dc-data
           key: owasp-nvd-data-${{ runner.os }}-${{ steps.date.outputs.date }}
