@@ -13,7 +13,7 @@
         <artifactId>dependency-check-maven</artifactId>
         <version>12.2.2</version>
         <configuration>
-          <dataDirectory>${project.basedir}/dc-data</dataDirectory>
+          <dataDirectory>${project.basedir}/owasp-dc-data</dataDirectory>
           <failBuildOnCVSS>11</failBuildOnCVSS>
         </configuration>
       </plugin>
