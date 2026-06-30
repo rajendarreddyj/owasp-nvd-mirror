@@ -31,7 +31,7 @@ Download the latest database archive from the [Releases page](https://github.com
    **Maven CLI:**
    ```bash
    mvn org.owasp:dependency-check-maven:check \
-     -DdataDirectory=./dc-data \
+     -DdataDirectory=./owasp-dc-data \
      -Dscan=./your-project
    ```
 
@@ -42,7 +42,7 @@ Download the latest database archive from the [Releases page](https://github.com
      <artifactId>dependency-check-maven</artifactId>
      <version>12.2.2</version>
      <configuration>
-       <dataDirectory>/path/to/dc-data</dataDirectory>
+       <dataDirectory>/path/to/owasp-dc-data</dataDirectory>
      </configuration>
    </plugin>
    ```
@@ -61,7 +61,7 @@ Download the latest database archive from the [Releases page](https://github.com
 | Schedule | `0 2 * * 1` (Mon 02:00 UTC) | Weekly automatic update |
 | NVD API Delay | 500ms | Rate limit compliance |
 | Data Directory | `dc-data/` | NVD database storage location |
-| Release Tag | `nvd-data-latest` | Always points to the latest build |
+| Release Tag | `owasp-nvd-data-latest` | Always points to the latest build |
 | Timeout | 720 minutes | Maximum workflow duration |
 
 ### Required Secrets
