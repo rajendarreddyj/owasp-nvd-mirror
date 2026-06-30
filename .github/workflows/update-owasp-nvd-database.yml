@@ -9,7 +9,7 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # Node.js 24
 
 jobs:
-  update-nvd:
+  update-owasp-nvd:
     runs-on: ubuntu-latest
     timeout-minutes: 720
     permissions:
